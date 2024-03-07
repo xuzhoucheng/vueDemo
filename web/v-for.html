@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script src="WEB-INF/lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for="addr in addrs">{{addr}}</div>
+
+        <hr>
+        <div v-for="(addr,index) in addrs">{{index}}：{{addr}}</div>
+    </div>
+</body>
+
+
+<script>
+    //定义Vue对象
+    new Vue({
+        el:"#app",  //vue接管区域
+        data:{
+            addrs:["北京","上海","深圳","杭州","上饶"]
+        },
+        methods:{
+        }
+    })
+</script>
+</html>
